@@ -1,0 +1,32 @@
+<app-tiempo [tiempo]="temporizador.tiempo"></app-tiempo>
+
+<app-tiempo-botones
+  [obj]="temporizador"
+  [opcionApp]="1"
+  (iniciar)="iniciarTemporizador($event)"
+  (agregar)="activarModal($event)"
+  (reiniciar)="reiniciarValores($event)">
+</app-tiempo-botones>
+
+<app-nuevo-tiempo
+  [obj]="temporizador"
+  (agregar)="agregarALista($event)"
+  (cancelar)="cancelarModal($event)"
+  (sumar)="sumar($event)"
+  (restar)="restar($event)">
+</app-nuevo-tiempo>
+
+<app-lista-de-tiempos
+  [obj]="temporizador"
+  [opcionApp]="1"
+  (agregar)="agregarAlPrincipal($event)"
+  (eliminar)="eliminarTiempo($event)">
+</app-lista-de-tiempos>
+
+<audio 
+  controls
+  [id]="temporizador.nombre"
+  [src]="alarmaSeleccionada.src"
+  type="audio/mpeg"
+  preload="auto">
+</audio>

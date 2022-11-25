@@ -1,0 +1,13 @@
+
+<p class="contenedor-tiempo margen-1">
+  <time class="hora tiempo">{{ tiempo.hora }}</time>
+  <span class="simbolo">:</span>
+  <time class="minuto tiempo">{{ tiempo.minuto | conversorATiempo }}</time>
+  <span class="simbolo">:</span>
+  <time class="segundo tiempo">{{ tiempo.segundo | conversorATiempo }}</time>
+</p>
+<p class="contenedor-tiempo texto margen-2">
+  <span class="texto-tiempo hora">horas</span>
+  <span class="texto-tiempo minuto">minutos</span>
+  <span class="texto-tiempo segundo">segundos</span>
+</p>

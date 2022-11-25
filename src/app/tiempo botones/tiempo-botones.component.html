@@ -1,0 +1,29 @@
+<ng-container *ngIf="opcionApp === 1">
+  <div class="principales contenedor">
+    <button class="btn reiniciar" (click)="reiniciar()">REINICIAR</button>
+    <button class="btn iniciar" (click)="iniciar()">{{ obj.tiempoActivo? 'PAUSAR' : 'INICIAR' }}</button>
+  </div>
+
+  <div class="secundarios contenedor">
+    <button class="btn agregar" (click)="agregar()">
+      <span class="icono icon-clock">
+      </span>
+      Nuevo
+    </button>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="opcionApp === 2">
+  <div class="principales contenedor">
+    <button class="btn reiniciar" (click)="reiniciar()">REINICIAR</button>
+    <button class="btn iniciar" (click)="iniciar()">{{ obj.tiempoActivo? 'PAUSAR' : 'INICIAR' }}</button>
+  </div>
+
+  <div class="secundarios contenedor">
+    <button class="btn agregar" (click)="agregar()">
+      <span class="icono icon-clock">
+      </span>
+      Agregar
+    </button>
+  </div>
+</ng-container>

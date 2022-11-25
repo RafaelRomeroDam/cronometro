@@ -1,0 +1,45 @@
+<div class="overlay" *ngIf="obj.agregarActivo === true">
+  <div class="pantalla-negra"  (click)="cancelarModal()"></div>
+  <div class="modal">
+    <h2 class="titulo">Nuevo tiempo</h2>
+    <ul class="modal-buttons">
+      <li>
+        <div class="contenedor-input-number">
+          <div class="input-resta" (click)="restar(1)">
+            <div class="icon-minus"></div>
+          </div>
+          <input class="numero" type="text" [(ngModel)]="obj.nuevoTiempo.hora" placeholder="horas">
+          <div class="input-suma" (click)="sumar(1)">
+            <div class="icon-plus"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="contenedor-input-number">
+          <div class="input-resta" (click)="restar(2)">
+            <div class="icon-minus"></div>
+          </div>
+          <input class="numero" type="text" [(ngModel)]="obj.nuevoTiempo.minuto" placeholder="minutos">
+          <div class="input-suma" (click)="sumar(2)">
+            <div class="icon-plus"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="contenedor-input-number">
+          <div class="input-resta" (click)="restar(3)">
+            <div class="icon-minus"></div>
+          </div>
+          <input class="numero" type="text" [(ngModel)]="obj.nuevoTiempo.segundo" placeholder="segundos">
+          <div class="input-suma" (click)="sumar(3)">
+            <div class="icon-plus"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="contenedor-botones">
+      <button class="btn agregar" (click)="agregarALaLista()">Agregar</button>
+      <button class="btn cancelar" (click)="cancelarModal()">Cancelar</button>
+    </div>
+  </div>
+</div>

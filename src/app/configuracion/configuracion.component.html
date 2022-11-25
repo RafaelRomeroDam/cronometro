@@ -1,0 +1,23 @@
+<ul class="lista-tiempos contenedor">
+  <li class="tiempo">
+    <p class="contenedor-tiempo-texto">
+      <span class="texto">Sonido</span>
+    </p>
+    <div class="ckbx-style-1" [ngClass]="{ activo: (configuracionService.sonidoActivo) } ">
+      <input type="checkbox" id="ckbx-style-1-1" value="0" name="ckbx-style-1">
+      <label for="ckbx-style-1-1" (click)="configuracionService.toggleCheckbox()"></label>
+    </div>
+  </li>
+  <li class="divisor"></li>
+  <li class="tiempo" (click)="activarModal()">
+    <p class="contenedor-tiempo-texto">
+      <span class="texto">Alarmas</span>
+    </p>
+  </li>
+  <li class="divisor"></li>
+</ul>
+<app-nueva-alarma
+  [obj]="configuracionService"
+  [activo]="modalActivo"
+  (cancelar)="cancelarModal()">
+</app-nueva-alarma>

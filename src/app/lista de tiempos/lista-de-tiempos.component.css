@@ -1,0 +1,44 @@
+.lista-tiempos{
+  /*background: tomato;*/
+  color: #878787;
+  min-height: 300px;
+}
+.lista-tiempos .tiempo{
+  display: flex;
+  height: 50px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  transition: .3s;
+}
+.lista-tiempos .tiempo:hover{
+  color: #E8E8E8;
+}
+.lista-tiempos .tiempo .contenedor-tiempo-texto{
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+}
+.lista-tiempos .tiempo .contenedor-tiempo-texto .icono{
+  margin: 0 10px;
+  font-size: 24px;
+}
+.lista-tiempos .tiempo .contenedor-tiempo-texto .tiempo-texto{
+  font-size: 24px;
+}
+.tiempo .btn-eliminar{
+  background: none;
+  color: #878787;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  transition: .3s;
+  transition-property: color;
+}
+.tiempo .btn-eliminar:hover{
+  color: #E8E8E8;
+}
+.tiempo .btn-eliminar:active{
+  background: #404040;
+  border-radius: 50%;
+}

@@ -1,0 +1,67 @@
+.footer{
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.footer .linea{
+  height: 1px;
+  position: absolute;
+  background: #2D2D2D;
+  width: 100%;
+  top: calc(50% - 1px);
+}
+
+.footer .menu-contacto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  background: #111;
+  z-index: 2;
+}
+.footer .menu-contacto .menu-item{
+  list-style: none;
+  margin: 4px;
+  z-index: 2;
+  background: #111;
+}
+.footer .menu-contacto .menu-item .item-enlace{
+  text-decoration: none;
+  font-size: 32px;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #2D2D2D;
+  transition: .3;
+  z-index: 2;
+}
+.footer .menu-contacto .menu-item .item-enlace.azul{
+  color: #3c5b9b;
+}
+.footer .menu-contacto .menu-item .item-enlace.azul:hover{
+  background: #3c5b9b;
+  color: #fff;
+}
+.footer .menu-contacto .menu-item .item-enlace.celeste{
+  color: #2daae1;
+}
+.footer .menu-contacto .menu-item .item-enlace.celeste:hover{
+  background: #2daae1;
+  color: #fff;
+}
+.footer .menu-contacto .menu-item .item-enlace.blanco{
+  color: #fff;
+}
+.footer .menu-contacto .menu-item .item-enlace.blanco:hover{
+  background: #fff;
+  color: #111111;
+}
+.footer .menu-contacto .menu-item .item-enlace.marron{
+  color: #563a2f;
+}
+.footer .menu-contacto .menu-item .item-enlace.marron:hover{
+  background: #563a2f;
+  color: #fff;
+}

@@ -1,0 +1,44 @@
+.contenedor-input-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-input-number .input-resta, 
+.contenedor-input-number .input-suma {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 57px;
+}
+
+.contenedor-input-number .input-suma {
+}
+.contenedor-input-number .input-resta {
+}
+.contenedor-input-number .input-suma .icon-plus,
+.contenedor-input-number .input-resta .icon-minus {
+  border-radius: 50%;
+  background: #404040;
+  padding: 7px;
+  cursor: pointer;
+}
+.contenedor-input-number .input-suma .icon-plus {
+}
+
+.contenedor-input-number .input-resta .icon-minus {
+}
+
+.contenedor-input-number .numero {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  /* flex-basis: auto; */
+  border-radius: 3px;
+  font-size: 16px;
+  text-align: center;
+  color: #545454;
+}

@@ -1,0 +1,22 @@
+<div class="overlay" *ngIf="activo">
+  <div class="pantalla-negra" (click)="cancelarModal()"></div>
+  <div class="modal">
+    <h2 class="titulo">Alarmas</h2>
+    <ul class="lista-de-entrada">
+      <li class="item-entrada" *ngFor="let alarma of obj.listaDeAlarmas; let indiceDeAlarma = index">
+        <label class="label-radio">
+          <input class="entrada" type="radio" name="alarmas" [value]="alarma"  [(ngModel)]="obj.alarmaSeleccionada">
+          <div class="pelotita">
+            <div class="pelotita-activo" *ngIf="sonIguales(alarma)"></div>
+          </div>
+          <span class="nombre">
+            {{ alarma.nombre }}
+          </span>
+        </label>
+      </li>
+    </ul>
+    <div class="contenedor-botones">
+      <button class="btn cancelar" (click)="cancelarModal()">Cancelar</button>
+    </div>
+  </div>
+</div>

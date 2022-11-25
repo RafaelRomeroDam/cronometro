@@ -1,0 +1,42 @@
+<ul class="lista-tiempos contenedor">
+  <ng-container *ngIf="opcionApp === 1">
+    <li
+      class="tiempo"
+      *ngFor="let tiempo of obj.listaDeTiempos; let indiceDeTiempo = index"
+      (click)="agregarAlPrincipal(tiempo, obj)"
+      (mouseenter)="activarBotonEliminar(indiceDeTiempo, obj)"
+      (mouseleave)="desactivarBotonEliminar(indiceDeTiempo, obj)">
+      <p class="contenedor-tiempo-texto">
+        <span class="icon-clock2 icono"></span>
+        <time class="tiempo-texto">
+          {{ tiempo.hora }}:{{ tiempo.minuto | conversorATiempo }}:{{ tiempo.segundo | conversorATiempo }}
+        </time>
+      </p>
+      <button 
+        *ngIf="tiempo.botonEliminarActivo"
+        class="btn-eliminar icon-bin2" 
+        (click)="eliminarTiempo(indiceDeTiempo, obj)">
+      </button>
+    </li>
+  </ng-container>
+
+  <ng-container *ngIf="opcionApp === 2">
+    <li
+      class="tiempo"
+      *ngFor="let tiempo of obj.listaDeTiempos; let indiceDeTiempo = index"
+      (mouseenter)="activarBotonEliminar(indiceDeTiempo, obj)"
+      (mouseleave)="desactivarBotonEliminar(indiceDeTiempo, obj)">
+      <p class="contenedor-tiempo-texto">
+        <span class="icon-clock2 icono"></span>
+        <time class="tiempo-texto">
+          {{ tiempo.hora }}:{{ tiempo.minuto | conversorATiempo }}:{{ tiempo.segundo | conversorATiempo }}
+        </time>
+      </p>
+      <button 
+        *ngIf="tiempo.botonEliminarActivo"
+        class="btn-eliminar icon-bin2" 
+        (click)="eliminarTiempo(indiceDeTiempo, obj)">
+      </button>
+    </li>
+  </ng-container>
+</ul>

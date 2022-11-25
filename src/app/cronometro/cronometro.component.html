@@ -1,0 +1,19 @@
+<app-tiempo [tiempo]="cronometro.tiempo">
+  
+</app-tiempo>
+
+<app-tiempo-botones
+  [obj]="cronometro"
+  [opcionApp]="2"
+  (iniciar)="iniciarCronometro($event)"
+  (agregar)="agregarALista($event)"
+  (reiniciar)="reiniciarValores($event)">
+</app-tiempo-botones>
+
+
+<app-lista-de-tiempos
+  [obj]="cronometro"
+  [opcionApp]="2"
+  (eliminar)="eliminarTiempo($event)">
+</app-lista-de-tiempos>
+
